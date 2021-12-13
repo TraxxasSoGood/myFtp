@@ -49,9 +49,8 @@ export function launch(port) {
         break;
       case "CWD":
         if (args[0] == undefined) {
-          process.chdir(directory);
-          socket.write(`250 Nouveau chemin : ${process.cwd()} \r\n`);
-          }
+          socket.write(`Veuillez renter un argument.\r\n`);
+        }
           else {
             try{
               process.chdir(args[0]);
